@@ -8,6 +8,15 @@ protected:
     int** m_data;
 public:
     Matrix(int row, int col);
+
+    Matrix(const Matrix& other);
+
+    Matrix(Matrix&& other)noexcept;
+
+    Matrix& operator=(const Matrix& other);
+
+    Matrix& operator=(Matrix&& other)noexcept;
+
     virtual ~Matrix();
 
     void setValue(int row,int col,int value);

@@ -6,6 +6,8 @@ protected:
     int m_row;
     int m_col;
     int** m_data;
+
+    static int a_count;
 public:
     Matrix(int row, int col);
 
@@ -21,6 +23,8 @@ public:
 
     void setValue(int row,int col,int value);
     int getValue(int row,int col) const;
+
+    static int getCount();
 
 
 };
